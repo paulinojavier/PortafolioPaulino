@@ -4,7 +4,7 @@
   "description": "Portafolio de proyectos",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "start": "node index.js"
   },
   "author": "Javier Paulino",
   "license": "ISC",

@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 const db = require('../config/bd');
 
-const slug = require('slug');
-const shotid = require('shortid');
+/*const slug = require('slug');
+const shotid = require('shortid');*/
 
 const Proyectos = db.define('proyectos',{
     id: {

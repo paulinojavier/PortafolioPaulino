@@ -2,7 +2,10 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const routes = require('./routes');
 const  path = require('path');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+
+//extraer valores de variables.env
+require('dotenv').config({path:'variables.env'});
 
 //crear la conexion a la BD
 const db = require('./config/bd');
@@ -35,5 +38,10 @@ app.use(bodyParser.urlencoded({extended:true}));
 //rutas para el home
 app.use('/',routes());
 
-app.listen(4000);
+//Servidor y puerto 
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000;
 
+app.listen(port, host,()=>{
+    console.log( 'El servidor esta funcionando');
+});

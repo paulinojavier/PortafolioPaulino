@@ -113,23 +113,23 @@
 											<li><a data-filter="*" class="gallery_active">todos</a></li>
 											<li><a data-filter=".design">Diseño</a></li>
 											<li><a data-filter=".development">Desarrollo</a></li>
-											<li><a data-filter=".photoshop">Photoshop</a></li>
 											<li><a data-filter=".template">Template</a></li>
+											<li><a data-filter=".hobbies">Hobbies</a></li>
 										</ul>
 									</div>
 									
 								<div class="gallery_container">
 									<div class="gallery_grid">
 										{{#if proyectos.length}}
-									    {{#each proyectos }}
+									    {{#each proyectos as | proyecto | }}
 										<div class="grid-item design">
-											<a href="/img/product/cv-product01.jpg" class="view">
+											<a href="{{proyecto.url}}">
 												<div class="grid_img">
-													<img src="/img/product/cv-product01.jpg" alt="project-img">
+													<img src="/img/works/{{proyecto.imagen}}" alt="project-img">
 												</div>
 												<div class="grid-content">
-													<h3>Moc Design</h3>
-													<span>Design</span>
+													<h3>{{proyecto.nombre}}</h3>
+													<span>{{proyecto.categoria}}</span>
 												</div>
 											</a>	
 										</div>

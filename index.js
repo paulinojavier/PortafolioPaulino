@@ -1,5 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const handlebars = require('handlebars');
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
 const routes = require('./routes');
 const  path = require('path');
 const bodyParser = require('body-parser');
@@ -23,7 +25,9 @@ const app = express();
 // habilitar handlebars como vista 
 app.engine('handlebars', 
     exphbs({
-        defaultLayout:'layout'
+        handlebars: allowInsecurePrototypeAccess(handlebars),
+        defaultLayout:'layout',
+        
     })
 );
 

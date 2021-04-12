@@ -97,7 +97,7 @@ ul {
 }
 
 .prt_toppadder80 {
-	padding-top: 80px
+	padding-top: 20px
 }
 
 .prt_toppadder90 {
@@ -145,7 +145,7 @@ ul {
 }
 
 .prt_bottompadder80 {
-	padding-bottom: 80px
+	padding-bottom: 5px
 }
 
 .prt_bottompadder90 {
@@ -2288,7 +2288,7 @@ h2.project_heading:after {
 
 /*================== 13 Start responser section css ==================  */
 .port_responsor_setions {
-    background: #00c8da;
+    background:white;
 }
 .port_responsor_setions .port_swipper_responsor {
     text-align: center;
